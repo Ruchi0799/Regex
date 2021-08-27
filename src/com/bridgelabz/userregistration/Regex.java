@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Regex {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        System.out.println("What do you want to Validate 1.Firstname \n 2.Lastname  \n 3.EmailId");
+        System.out.println("What do you want to Validate 1.Firstname \n 2.Lastname  \n 3.EmailId \n 4.MobileNo");
         int choice= sc.nextInt();
         switch (choice){
             case 1:
@@ -44,6 +44,19 @@ public class Regex {
                 }
                 else {
                     System.out.println("Invalid Email ID");
+                }
+                break;
+
+            case 4:
+                System.out.println("Enter Mobile no");
+                String mobileNo=sc.next();
+                String regexMN= "[0-9]{2,} [0-9]{10}";
+                if (mobileNo.matches(regexMN))
+                {
+                    System.out.println("Mobile no is Valid");
+                }
+                else {
+                    System.out.println("Invalid Mobile no");
                 }
                 break;
         }
