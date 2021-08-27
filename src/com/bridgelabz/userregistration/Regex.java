@@ -63,7 +63,7 @@ public class Regex {
             case 5:
                 System.out.println("Enter your password");
                 String password=sc.next();
-                String regexp= "^[a-zA-Z0-9]{8,}";
+                String regexp= "(?=.*[a-z])(?=.*[A-Z]).{8,}";
                 if (password.matches(regexp))
                 {
                     System.out.println("Password is Valid");
