@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Regex {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        System.out.println("What do you want to Validate 1.Firstname \n 2.Lastname  \n 3.EmailId \n 4.MobileNo");
+        System.out.println("What do you want to Validate \n 1.Firstname \n 2.Lastname  \n 3.EmailId \n 4.MobileNo \n 5.Password");
         int choice= sc.nextInt();
         switch (choice){
             case 1:
@@ -57,6 +57,19 @@ public class Regex {
                 }
                 else {
                     System.out.println("Invalid Mobile no");
+                }
+                break;
+
+            case 5:
+                System.out.println("Enter your password");
+                String password=sc.next();
+                String regexp= "^[a-zA-Z0-9]{8,}";
+                if (password.matches(regexp))
+                {
+                    System.out.println("Password is Valid");
+                }
+                else {
+                    System.out.println("Invalid password");
                 }
                 break;
         }
